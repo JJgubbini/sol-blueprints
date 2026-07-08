@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soul Blueprint Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-label="Soul Blueprint Studio">
+        <img src="assets/soul-blueprint-hero.png" alt="" class="hero__image" />
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Custom interpretive reports</p>
+          <h1>Soul Blueprint Studio</h1>
+          <p class="intro">
+            Build layered personal reports from birth details, name resonance, archetypal patterns,
+            purpose mapping, and contemplative self-inquiry.
+          </p>
+          <div class="hero__actions">
+            <a href="#studio" class="button button--primary">Create report</a>
+            <a href="#method" class="button button--secondary">View method</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="studio" class="studio">
+        <form class="panel intake" id="reportForm">
+          <div class="section-heading">
+            <p class="eyebrow">Client intake</p>
+            <h2>Birth data, name, and context</h2>
+          </div>
+
+          <label>
+            Full name
+            <input name="fullName" type="text" placeholder="Maya Sol Rivera" required />
+          </label>
+
+          <div class="grid-2">
+            <label>
+              Birth date
+              <input name="birthDate" type="date" required />
+            </label>
+            <label>
+              Birth time
+              <input name="birthTime" type="time" required />
+            </label>
+          </div>
+
+          <label>
+            Birth location
+            <input name="birthLocation" type="text" placeholder="City, region, country" required />
+          </label>
+
+          <label>
+            Current focus
+            <select name="focus">
+              <option>Purpose and direction</option>
+              <option>Career transition</option>
+              <option>Relationship patterns</option>
+              <option>Creative identity</option>
+              <option>Spiritual growth</option>
+            </select>
+          </label>
+
+          <label>
+            Optional notes
+            <textarea name="notes" rows="4" placeholder="Questions, life themes, repeating patterns, goals, or areas they want clarity on."></textarea>
+          </label>
+
+          <fieldset>
+            <legend>Report modules</legend>
+            <label class="check"><input type="checkbox" name="module" value="Natal Chart" checked /> Natal chart</label>
+            <label class="check"><input type="checkbox" name="module" value="Ikigai" checked /> Ikigai map</label>
+            <label class="check"><input type="checkbox" name="module" value="Archetypes" checked /> Archetypes</label>
+            <label class="check"><input type="checkbox" name="module" value="Gene Keys" /> Gene Keys</label>
+            <label class="check"><input type="checkbox" name="module" value="Numerology" /> Name numerology</label>
+            <label class="check"><input type="checkbox" name="module" value="Human Design" /> Human Design</label>
+          </fieldset>
+
+          <button class="button button--submit" type="submit">Generate preview</button>
+        </form>
+
+        <article class="panel report" id="reportPreview" aria-live="polite">
+          <div class="report__top">
+            <div>
+              <p class="eyebrow">Preview report</p>
+              <h2 id="reportTitle">Awaiting client details</h2>
+            </div>
+            <span class="status">Draft</span>
+          </div>
+
+          <div class="report__summary" id="reportSummary">
+            Enter a name, birth date, birth time, and location to generate the first interpretive draft.
+          </div>
+
+          <div class="report__meta" id="reportMeta">
+            <span>Birth signature</span>
+            <span>Purpose lens</span>
+            <span>Integration prompts</span>
+          </div>
+
+          <div class="report__sections" id="reportSections"></div>
+        </article>
+      </section>
+
+      <section id="method" class="method">
+        <div class="section-heading">
+          <p class="eyebrow">Build path</p>
+          <h2>What this first version sets up</h2>
+        </div>
+        <div class="method__grid">
+          <div>
+            <h3>1. Guided intake</h3>
+            <p>Collect the exact inputs needed for chart work, purpose inquiry, and personalized reflection.</p>
+          </div>
+          <div>
+            <h3>2. Modular report engine</h3>
+            <p>Each report type is its own section, so you can add real ephemeris, Gene Keys, or Human Design logic later.</p>
+          </div>
+          <div>
+            <h3>3. Premium delivery</h3>
+            <p>The generated draft is structured like a client-facing report, ready to evolve into PDF export or client accounts.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
